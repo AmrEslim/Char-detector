@@ -1,0 +1,56 @@
+\doxysection{mainwindow.\+h}
+\hypertarget{mainwindow_8h_source}{}\label{mainwindow_8h_source}\index{C:/Users/Amr/Desktop/finale/mpt-\/23-\/project-\/abfz/mainwindow.h@{C:/Users/Amr/Desktop/finale/mpt-\/23-\/project-\/abfz/mainwindow.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ MAINWINDOW\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ MAINWINDOW\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <QMainWindow>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}Neuronal\_Network.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}trainmodelworker.h"{}}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ QT\_BEGIN\_NAMESPACE}
+\DoxyCodeLine{00009\ \textcolor{keyword}{namespace\ }Ui\ \{\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_main_window}{MainWindow}};\ \}}
+\DoxyCodeLine{00010\ QT\_END\_NAMESPACE}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_main_window}{MainWindow}}\ :\ \textcolor{keyword}{public}\ QMainWindow}
+\DoxyCodeLine{00013\ \{}
+\DoxyCodeLine{00014\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00017\ \ \ \ \ \mbox{\hyperlink{class_main_window}{MainWindow}}(QWidget\ *parent\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00018\ \ \ \ \ \mbox{\hyperlink{class_main_window}{\string~MainWindow}}();}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{void}\ loadEMNISTData(\textcolor{keyword}{const}\ std::string\&\ filename,\ std::vector<std::vector<double>>\&\ data,\ std::vector<int>\&\ labels);}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{void}\ loadData();}
+\DoxyCodeLine{00021\ \ \ \ \ std::string\ labelToChar(\textcolor{keywordtype}{int}\ label);}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00024\ \ \ \ \ Ui::MainWindow\ *ui;}
+\DoxyCodeLine{00025\ \ \ \ \ \mbox{\hyperlink{class_neural_network}{NeuralNetwork}}\ *neuralNetwork;}
+\DoxyCodeLine{00026\ \ \ \ \ std::vector<std::vector<double>>\ trainingData;}
+\DoxyCodeLine{00027\ \ \ \ \ std::vector<int>\ trainingLabels;}
+\DoxyCodeLine{00028\ \ \ \ \ std::vector<std::vector<double>>\ testData;}
+\DoxyCodeLine{00029\ \ \ \ \ std::vector<int>\ testLabels;}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{void}\ test\_suite(\mbox{\hyperlink{class_neural_network}{NeuralNetwork}}\&\ nn,\ std::vector<std::vector<double>>\&\ inputs,\ std::vector<int>\&\ labels,\ \textcolor{keywordtype}{int}\&\ results);}
+\DoxyCodeLine{00031\ \ \ \ \ \mbox{\hyperlink{class_train_model_worker}{TrainModelWorker}}*\ worker;}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{bool}\ isTraining;}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{bool}\ isTestingPeriodically;}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{int}\ testingIndex;}
+\DoxyCodeLine{00035\ \ \ \ \ QTimer*\ testingTimer;}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{void}\ performPeriodicTest();}
+\DoxyCodeLine{00037\ \ \ \ \ QImage\ vectorToQImage(\textcolor{keyword}{const}\ std::vector<double>\&\ image);}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \textcolor{keyword}{private}\ slots:}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_periodicTest\_clicked();}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{void}\ trainModel();}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{void}\ testModel();}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{void}\ saveModel();}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordtype}{void}\ loadModel();}
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordtype}{void}\ onTrainingCompleted(QString\ message);}
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordtype}{void}\ stopTraining();}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{void}\ updateTrainingProgress(\textcolor{keywordtype}{int}\ epoch);}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{void}\ updateErrorGraph(\textcolor{keywordtype}{double}\ error);}
+\DoxyCodeLine{00049\ \};}
+\DoxyCodeLine{00050\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ MAINWINDOW\_H}}
+
+\end{DoxyCode}

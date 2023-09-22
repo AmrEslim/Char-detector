@@ -1,0 +1,98 @@
+\doxysection{My\+Matrix Class Reference}
+\hypertarget{class_my_matrix}{}\label{class_my_matrix}\index{MyMatrix@{MyMatrix}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_my_matrix_a3c2dd1ec5266dc48c107c1a7c4fd91a4}\label{class_my_matrix_a3c2dd1ec5266dc48c107c1a7c4fd91a4} 
+{\bfseries My\+Matrix} (int rows, int cols)
+\item 
+\Hypertarget{class_my_matrix_ae84d7f839631d3f9efbb564d4bca5123}\label{class_my_matrix_ae84d7f839631d3f9efbb564d4bca5123} 
+{\bfseries My\+Matrix} (const \mbox{\hyperlink{class_my_matrix}{My\+Matrix}} \&other)
+\item 
+\Hypertarget{class_my_matrix_a55485438e180a52340097cf29f2fc6ec}\label{class_my_matrix_a55485438e180a52340097cf29f2fc6ec} 
+{\bfseries My\+Matrix} (const std\+::vector$<$ double $>$ \&values, bool is\+Column=true)
+\item 
+\Hypertarget{class_my_matrix_a9ede12437291e9461a960c8e227a7464}\label{class_my_matrix_a9ede12437291e9461a960c8e227a7464} 
+int {\bfseries rows} () const
+\item 
+\Hypertarget{class_my_matrix_a779d086bdf165a214930a940a7196df4}\label{class_my_matrix_a779d086bdf165a214930a940a7196df4} 
+int {\bfseries columns} () const
+\item 
+\Hypertarget{class_my_matrix_a3088ed10948f9b2d6e5b10222f591aab}\label{class_my_matrix_a3088ed10948f9b2d6e5b10222f591aab} 
+double {\bfseries sum} () const
+\item 
+\Hypertarget{class_my_matrix_aede9f301151c96eb0e970e2201d74493}\label{class_my_matrix_aede9f301151c96eb0e970e2201d74493} 
+double {\bfseries operator()} (int row, int col) const
+\item 
+\Hypertarget{class_my_matrix_a2b1074cc379a62659496125c3699a035}\label{class_my_matrix_a2b1074cc379a62659496125c3699a035} 
+double \& {\bfseries operator()} (int row, int col)
+\item 
+\Hypertarget{class_my_matrix_a9d14e4080b0f626e1150781479613950}\label{class_my_matrix_a9d14e4080b0f626e1150781479613950} 
+\mbox{\hyperlink{class_my_matrix}{My\+Matrix}} {\bfseries operator+} (const \mbox{\hyperlink{class_my_matrix}{My\+Matrix}} \&other) const
+\item 
+\Hypertarget{class_my_matrix_a39fb27085eeb76cbd0ddb25a842c5681}\label{class_my_matrix_a39fb27085eeb76cbd0ddb25a842c5681} 
+\mbox{\hyperlink{class_my_matrix}{My\+Matrix}} {\bfseries operator-\/} (const \mbox{\hyperlink{class_my_matrix}{My\+Matrix}} \&other) const
+\item 
+\Hypertarget{class_my_matrix_a895d617c1b91f43723367081441af3dc}\label{class_my_matrix_a895d617c1b91f43723367081441af3dc} 
+\mbox{\hyperlink{class_my_matrix}{My\+Matrix}} {\bfseries operator\texorpdfstring{$\ast$}{*}} (const \mbox{\hyperlink{class_my_matrix}{My\+Matrix}} \&other) const
+\item 
+\Hypertarget{class_my_matrix_ac181d958bdfb7811f61b2df0f5fa75c7}\label{class_my_matrix_ac181d958bdfb7811f61b2df0f5fa75c7} 
+\mbox{\hyperlink{class_my_matrix}{My\+Matrix}} {\bfseries operator\texorpdfstring{$\ast$}{*}} (double scalar) const
+\item 
+\Hypertarget{class_my_matrix_a92edd957aac94fe31274edbfb1cefd07}\label{class_my_matrix_a92edd957aac94fe31274edbfb1cefd07} 
+void {\bfseries operator+=} (const \mbox{\hyperlink{class_my_matrix}{My\+Matrix}} \&other)
+\item 
+\Hypertarget{class_my_matrix_a051e9af2a127bc1e81b8007949db5974}\label{class_my_matrix_a051e9af2a127bc1e81b8007949db5974} 
+void {\bfseries operator-\/=} (const \mbox{\hyperlink{class_my_matrix}{My\+Matrix}} \&other)
+\item 
+\Hypertarget{class_my_matrix_a99adde94fddf5a1a775cd3d4f96d807a}\label{class_my_matrix_a99adde94fddf5a1a775cd3d4f96d807a} 
+void {\bfseries operator\texorpdfstring{$\ast$}{*}=} (const \mbox{\hyperlink{class_my_matrix}{My\+Matrix}} \&other)
+\item 
+\Hypertarget{class_my_matrix_ac235614405c3078429a8826c9508d395}\label{class_my_matrix_ac235614405c3078429a8826c9508d395} 
+void {\bfseries resize} (int new\+Rows, int new\+Cols)
+\item 
+\Hypertarget{class_my_matrix_a599e2bd86f5767357c46b4bfa07f4507}\label{class_my_matrix_a599e2bd86f5767357c46b4bfa07f4507} 
+void {\bfseries randomize} (double min\+Val, double max\+Val)
+\item 
+\Hypertarget{class_my_matrix_ad8dfcb2286b4c6b9b3659debf6658a83}\label{class_my_matrix_ad8dfcb2286b4c6b9b3659debf6658a83} 
+\mbox{\hyperlink{class_my_matrix}{My\+Matrix}} {\bfseries transpose} () const
+\item 
+\Hypertarget{class_my_matrix_a089dfb4489b2be040ccc4a3d85eb3dea}\label{class_my_matrix_a089dfb4489b2be040ccc4a3d85eb3dea} 
+std\+::vector$<$ std\+::vector$<$ double $>$ $>$ {\bfseries to\+List} () const
+\item 
+\Hypertarget{class_my_matrix_a3c03153e57f613c508e0012ffdc19b34}\label{class_my_matrix_a3c03153e57f613c508e0012ffdc19b34} 
+void {\bfseries from\+List} (const std\+::vector$<$ std\+::vector$<$ double $>$ $>$ \&list)
+\item 
+\Hypertarget{class_my_matrix_a49901da9d5208f24afb61a52ba50ebca}\label{class_my_matrix_a49901da9d5208f24afb61a52ba50ebca} 
+std\+::vector$<$ double $>$ {\bfseries get\+Column\+As\+Vector} (int col\+Index) const
+\item 
+\Hypertarget{class_my_matrix_a1fcac2e3d145657cf9369de79dc5afac}\label{class_my_matrix_a1fcac2e3d145657cf9369de79dc5afac} 
+\mbox{\hyperlink{class_my_matrix}{My\+Matrix}} {\bfseries element\+Wise\+Product} (const \mbox{\hyperlink{class_my_matrix}{My\+Matrix}} \&other) const
+\item 
+\Hypertarget{class_my_matrix_a18d1d89e5c26d0ece1f1baa0f8fb0768}\label{class_my_matrix_a18d1d89e5c26d0ece1f1baa0f8fb0768} 
+void {\bfseries set\+All} (double value)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_my_matrix_a60f11577b9312b417d7b86e93659aaf5}\label{class_my_matrix_a60f11577b9312b417d7b86e93659aaf5} 
+static \mbox{\hyperlink{class_my_matrix}{My\+Matrix}} {\bfseries all\+Ones} (int rows, int cols)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_my_matrix_a4162cbb1aa4e9996aedb5befdbd7d4ac}\label{class_my_matrix_a4162cbb1aa4e9996aedb5befdbd7d4ac} 
+int {\bfseries m\+\_\+rows}
+\item 
+\Hypertarget{class_my_matrix_a702e7c0560801b91e6e828475b6c1d0d}\label{class_my_matrix_a702e7c0560801b91e6e828475b6c1d0d} 
+int {\bfseries m\+\_\+cols}
+\item 
+\Hypertarget{class_my_matrix_abd815bb5e2ecd3d130a4fdebd5243c54}\label{class_my_matrix_abd815bb5e2ecd3d130a4fdebd5243c54} 
+std\+::vector$<$ double $>$ {\bfseries m\+\_\+data}
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Amr/\+Desktop/finale/mpt-\/23-\/project-\/abfz/Matrix.\+h\item 
+C\+:/\+Users/\+Amr/\+Desktop/finale/mpt-\/23-\/project-\/abfz/Matrix.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,53 @@
+\doxysection{Train\+Model\+Worker Class Reference}
+\hypertarget{class_train_model_worker}{}\label{class_train_model_worker}\index{TrainModelWorker@{TrainModelWorker}}
+Inheritance diagram for Train\+Model\+Worker\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_train_model_worker}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_train_model_worker_ae9b42aea72df1f161cf5a4ccf966374e}\label{class_train_model_worker_ae9b42aea72df1f161cf5a4ccf966374e} 
+void {\bfseries training\+Progress\+Update} (const QString \&message)
+\item 
+\Hypertarget{class_train_model_worker_a1559d8afda6ae298110c3717c455dc22}\label{class_train_model_worker_a1559d8afda6ae298110c3717c455dc22} 
+void {\bfseries training\+Completed} (QString message)
+\item 
+\Hypertarget{class_train_model_worker_a7e73611c7c8fed2ed1c0969647af9181}\label{class_train_model_worker_a7e73611c7c8fed2ed1c0969647af9181} 
+void {\bfseries epoch\+Update} (int epoch)
+\item 
+\Hypertarget{class_train_model_worker_af4aa4fa3f17875e678eeef1d918b46df}\label{class_train_model_worker_af4aa4fa3f17875e678eeef1d918b46df} 
+void {\bfseries training\+Error\+Reported} (double error)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_train_model_worker_a960e6fe2b68b63edc3d67e8cb6ad5f6f}\label{class_train_model_worker_a960e6fe2b68b63edc3d67e8cb6ad5f6f} 
+{\bfseries Train\+Model\+Worker} (\mbox{\hyperlink{class_neural_network}{Neural\+Network}} \texorpdfstring{$\ast$}{*}nn, const std\+::vector$<$ std\+::vector$<$ double $>$ $>$ \&data, const std\+::vector$<$ int $>$ \&labels)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_train_model_worker_a1f11706d9d941a9b6232228d9bef2add}\label{class_train_model_worker_a1f11706d9d941a9b6232228d9bef2add} 
+void {\bfseries run} () override
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_train_model_worker_ab7f796cd07673dff552feb2961156b4d}\label{class_train_model_worker_ab7f796cd07673dff552feb2961156b4d} 
+\mbox{\hyperlink{class_neural_network}{Neural\+Network}} \texorpdfstring{$\ast$}{*} {\bfseries neural\+Network}
+\item 
+\Hypertarget{class_train_model_worker_a176f373c49ea54f6c42408ab48dae03a}\label{class_train_model_worker_a176f373c49ea54f6c42408ab48dae03a} 
+std\+::vector$<$ std\+::vector$<$ double $>$ $>$ {\bfseries training\+Data}
+\item 
+\Hypertarget{class_train_model_worker_a8f2ca7d2f4a2cdd06d12292fd1162d51}\label{class_train_model_worker_a8f2ca7d2f4a2cdd06d12292fd1162d51} 
+std\+::vector$<$ int $>$ {\bfseries training\+Labels}
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Amr/\+Desktop/finale/mpt-\/23-\/project-\/abfz/trainmodelworker.\+h\item 
+C\+:/\+Users/\+Amr/\+Desktop/finale/mpt-\/23-\/project-\/abfz/trainmodelworker.\+cpp\end{DoxyCompactItemize}

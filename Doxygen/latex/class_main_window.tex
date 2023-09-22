@@ -1,0 +1,107 @@
+\doxysection{Main\+Window Class Reference}
+\hypertarget{class_main_window}{}\label{class_main_window}\index{MainWindow@{MainWindow}}
+Inheritance diagram for Main\+Window\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_main_window}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_main_window_a996c5a2b6f77944776856f08ec30858d}\label{class_main_window_a996c5a2b6f77944776856f08ec30858d} 
+{\bfseries Main\+Window} (QWidget \texorpdfstring{$\ast$}{*}parent=nullptr)
+\item 
+\Hypertarget{class_main_window_a6e807ca86e7732cbb617c98fb1a6d9c6}\label{class_main_window_a6e807ca86e7732cbb617c98fb1a6d9c6} 
+void {\bfseries load\+EMNISTData} (const std\+::string \&filename, std\+::vector$<$ std\+::vector$<$ double $>$ $>$ \&data, std\+::vector$<$ int $>$ \&labels)
+\item 
+\Hypertarget{class_main_window_a6906cd747941813c6da899b18d881473}\label{class_main_window_a6906cd747941813c6da899b18d881473} 
+void {\bfseries load\+Data} ()
+\item 
+\Hypertarget{class_main_window_ae18ecdf02e88dbf40a06f62bab69880b}\label{class_main_window_ae18ecdf02e88dbf40a06f62bab69880b} 
+std\+::string {\bfseries label\+To\+Char} (int label)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Slots}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_main_window_a128f2fd6adf728816a5340f17cb762a6}\label{class_main_window_a128f2fd6adf728816a5340f17cb762a6} 
+void {\bfseries on\+\_\+periodic\+Test\+\_\+clicked} ()
+\item 
+\Hypertarget{class_main_window_ad9c0d5bce8b49bededb1bd09302c372c}\label{class_main_window_ad9c0d5bce8b49bededb1bd09302c372c} 
+void {\bfseries train\+Model} ()
+\item 
+\Hypertarget{class_main_window_a6f30bcb10eada233d52d0ac9c3d5d014}\label{class_main_window_a6f30bcb10eada233d52d0ac9c3d5d014} 
+void {\bfseries test\+Model} ()
+\item 
+\Hypertarget{class_main_window_ade2f35634dc750022184cb8adb218e6b}\label{class_main_window_ade2f35634dc750022184cb8adb218e6b} 
+void {\bfseries save\+Model} ()
+\item 
+\Hypertarget{class_main_window_a99ed6423f4b7b4fe4807fa1334c6a7fa}\label{class_main_window_a99ed6423f4b7b4fe4807fa1334c6a7fa} 
+void {\bfseries load\+Model} ()
+\item 
+\Hypertarget{class_main_window_af1173621de86102d0bfa200bfe296016}\label{class_main_window_af1173621de86102d0bfa200bfe296016} 
+void {\bfseries on\+Training\+Completed} (QString message)
+\item 
+\Hypertarget{class_main_window_a1092df0320484e4b9f7dd3a6eb2c876b}\label{class_main_window_a1092df0320484e4b9f7dd3a6eb2c876b} 
+void {\bfseries stop\+Training} ()
+\item 
+\Hypertarget{class_main_window_a2a8b450858cc9ff69a0d80567153fafd}\label{class_main_window_a2a8b450858cc9ff69a0d80567153fafd} 
+void {\bfseries update\+Training\+Progress} (int epoch)
+\item 
+\Hypertarget{class_main_window_a16355bd73b87f8fb6c5ee4ce4efd118b}\label{class_main_window_a16355bd73b87f8fb6c5ee4ce4efd118b} 
+void {\bfseries update\+Error\+Graph} (double error)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_main_window_a1772fd342550328debfbef2403c8959e}\label{class_main_window_a1772fd342550328debfbef2403c8959e} 
+void {\bfseries test\+\_\+suite} (\mbox{\hyperlink{class_neural_network}{Neural\+Network}} \&nn, std\+::vector$<$ std\+::vector$<$ double $>$ $>$ \&inputs, std\+::vector$<$ int $>$ \&labels, int \&results)
+\item 
+\Hypertarget{class_main_window_a6978badc5127c2fbaf8e32ba062c8687}\label{class_main_window_a6978badc5127c2fbaf8e32ba062c8687} 
+void {\bfseries perform\+Periodic\+Test} ()
+\item 
+\Hypertarget{class_main_window_a1ac754a5f0aef3b8333466d09575e0f2}\label{class_main_window_a1ac754a5f0aef3b8333466d09575e0f2} 
+QImage {\bfseries vector\+To\+QImage} (const std\+::vector$<$ double $>$ \&image)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_main_window_a35466a70ed47252a0191168126a352a5}\label{class_main_window_a35466a70ed47252a0191168126a352a5} 
+Ui\+::\+Main\+Window \texorpdfstring{$\ast$}{*} {\bfseries ui}
+\item 
+\Hypertarget{class_main_window_aa152e97913e5097609f8a9c9bc4851ac}\label{class_main_window_aa152e97913e5097609f8a9c9bc4851ac} 
+\mbox{\hyperlink{class_neural_network}{Neural\+Network}} \texorpdfstring{$\ast$}{*} {\bfseries neural\+Network}
+\item 
+\Hypertarget{class_main_window_a046bb1f97e6a53cb7e4d42eeeff16ba5}\label{class_main_window_a046bb1f97e6a53cb7e4d42eeeff16ba5} 
+std\+::vector$<$ std\+::vector$<$ double $>$ $>$ {\bfseries training\+Data}
+\item 
+\Hypertarget{class_main_window_a9a1d4011a54095b139d8d4398b230380}\label{class_main_window_a9a1d4011a54095b139d8d4398b230380} 
+std\+::vector$<$ int $>$ {\bfseries training\+Labels}
+\item 
+\Hypertarget{class_main_window_aeea025107f08efe90092214beb3e18a2}\label{class_main_window_aeea025107f08efe90092214beb3e18a2} 
+std\+::vector$<$ std\+::vector$<$ double $>$ $>$ {\bfseries test\+Data}
+\item 
+\Hypertarget{class_main_window_a872bd96d6c2b019b701c342bda1490d6}\label{class_main_window_a872bd96d6c2b019b701c342bda1490d6} 
+std\+::vector$<$ int $>$ {\bfseries test\+Labels}
+\item 
+\Hypertarget{class_main_window_ae650fc07a80e9d5044715faba3516a01}\label{class_main_window_ae650fc07a80e9d5044715faba3516a01} 
+\mbox{\hyperlink{class_train_model_worker}{Train\+Model\+Worker}} \texorpdfstring{$\ast$}{*} {\bfseries worker}
+\item 
+\Hypertarget{class_main_window_ac696de8f96d46fad7aadd1bbf413892c}\label{class_main_window_ac696de8f96d46fad7aadd1bbf413892c} 
+bool {\bfseries is\+Training}
+\item 
+\Hypertarget{class_main_window_a1a0c63ebcab41cff6fa0faf40b693d01}\label{class_main_window_a1a0c63ebcab41cff6fa0faf40b693d01} 
+bool {\bfseries is\+Testing\+Periodically}
+\item 
+\Hypertarget{class_main_window_ae77fabdbca1d90787edd6b83ff2b3ca4}\label{class_main_window_ae77fabdbca1d90787edd6b83ff2b3ca4} 
+int {\bfseries testing\+Index}
+\item 
+\Hypertarget{class_main_window_a71b710b726fb62442510381e92c17d59}\label{class_main_window_a71b710b726fb62442510381e92c17d59} 
+QTimer \texorpdfstring{$\ast$}{*} {\bfseries testing\+Timer}
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Amr/\+Desktop/finale/mpt-\/23-\/project-\/abfz/mainwindow.\+h\item 
+C\+:/\+Users/\+Amr/\+Desktop/finale/mpt-\/23-\/project-\/abfz/mainwindow.\+cpp\end{DoxyCompactItemize}

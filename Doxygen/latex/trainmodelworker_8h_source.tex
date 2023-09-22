@@ -1,0 +1,33 @@
+\doxysection{trainmodelworker.\+h}
+\hypertarget{trainmodelworker_8h_source}{}\label{trainmodelworker_8h_source}\index{C:/Users/Amr/Desktop/finale/mpt-\/23-\/project-\/abfz/trainmodelworker.h@{C:/Users/Amr/Desktop/finale/mpt-\/23-\/project-\/abfz/trainmodelworker.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ TRAINMODELWORKER\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ TRAINMODELWORKER\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <QThread>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}Neuronal\_Network.h"{}}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_train_model_worker}{TrainModelWorker}}\ :\ \textcolor{keyword}{public}\ QThread\ \{}
+\DoxyCodeLine{00008\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00011\ \ \ \ \ \mbox{\hyperlink{class_train_model_worker}{TrainModelWorker}}(\mbox{\hyperlink{class_neural_network}{NeuralNetwork}}*\ nn,\ \textcolor{keyword}{const}\ std::vector<std::vector<double>>\&\ data,\ \textcolor{keyword}{const}\ std::vector<int>\&\ labels);}
+\DoxyCodeLine{00012\ signals:}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keywordtype}{void}\ trainingProgressUpdate(\textcolor{keyword}{const}\ QString\&\ message);}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keywordtype}{void}\ trainingCompleted(QString\ message);}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keywordtype}{void}\ epochUpdate(\textcolor{keywordtype}{int}\ epoch);}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordtype}{void}\ trainingErrorReported(\textcolor{keywordtype}{double}\ error);}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{void}\ run()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00022\ \ \ \ \ \mbox{\hyperlink{class_neural_network}{NeuralNetwork}}*\ neuralNetwork;}
+\DoxyCodeLine{00023\ \ \ \ \ std::vector<std::vector<double>>\ trainingData;\ \ \ \textcolor{comment}{//\ Remove\ the\ reference\ and\ const\ qualifiers}}
+\DoxyCodeLine{00024\ \ \ \ \ std::vector<int>\ trainingLabels;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Remove\ the\ reference\ and\ const\ qualifiers}}
+\DoxyCodeLine{00025\ \};}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ TRAINMODELWORKER\_H}}
+
+\end{DoxyCode}

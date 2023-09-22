@@ -1,0 +1,110 @@
+\doxysection{Neural\+Network Class Reference}
+\hypertarget{class_neural_network}{}\label{class_neural_network}\index{NeuralNetwork@{NeuralNetwork}}
+Inheritance diagram for Neural\+Network\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_neural_network}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_neural_network_a87c50638e0769d55e257605316c25c77}\label{class_neural_network_a87c50638e0769d55e257605316c25c77} 
+void {\bfseries training\+Progress} (QString message)
+\item 
+\Hypertarget{class_neural_network_a6f5dafebc1c468f68c6e0fb0314a243a}\label{class_neural_network_a6f5dafebc1c468f68c6e0fb0314a243a} 
+void {\bfseries epoch\+Updates} (int epoch)
+\item 
+\Hypertarget{class_neural_network_a5562e0e1bde66bc34bf3bbe5c12bae01}\label{class_neural_network_a5562e0e1bde66bc34bf3bbe5c12bae01} 
+void {\bfseries error\+Reported} (double error)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_neural_network_a78bce0b008485f597d8b64e52af6f04b}\label{class_neural_network_a78bce0b008485f597d8b64e52af6f04b} 
+{\bfseries Neural\+Network} (int input\+Size, int hidden\+Size, int output\+Size, double learning\+Rate)
+\item 
+\Hypertarget{class_neural_network_a04b50aeee3d10287bbf3bcee08ffe4e3}\label{class_neural_network_a04b50aeee3d10287bbf3bcee08ffe4e3} 
+std\+::vector$<$ double $>$ {\bfseries predict} (std\+::vector$<$ double $>$ \&input)
+\item 
+\Hypertarget{class_neural_network_a03282cb2ccaec522ec3d82933dd4baf6}\label{class_neural_network_a03282cb2ccaec522ec3d82933dd4baf6} 
+int {\bfseries one\+Hot\+Predict} (std\+::vector$<$ double $>$ \&input)
+\item 
+void \mbox{\hyperlink{class_neural_network_aafae44f51fb0f1a2af851eebe9a45644}{train}} (std\+::vector$<$ std\+::vector$<$ double $>$ $>$ \&inputs, std\+::vector$<$ int $>$ \&labels, int epochs, std\+::vector$<$ double $>$ \&errors, int batch\+Size)
+\begin{DoxyCompactList}\small\item\em Trains the neural network using the provided training data and labels. \end{DoxyCompactList}\item 
+\Hypertarget{class_neural_network_a48954ed4751a478b466d9a9cae372d5a}\label{class_neural_network_a48954ed4751a478b466d9a9cae372d5a} 
+void {\bfseries sigmoid} (\mbox{\hyperlink{class_my_matrix}{My\+Matrix}} \&matrix)
+\item 
+\Hypertarget{class_neural_network_a3d915d1d98532cacac3164de9ae0be93}\label{class_neural_network_a3d915d1d98532cacac3164de9ae0be93} 
+void {\bfseries save} (const std\+::string \&filename) const
+\item 
+\Hypertarget{class_neural_network_a2d7cf4ef937c396ff5b0077bc3d57cb0}\label{class_neural_network_a2d7cf4ef937c396ff5b0077bc3d57cb0} 
+void {\bfseries load} (const std\+::string \&filename)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_neural_network_a7a0350b8acec162310832fb94bc14220}\label{class_neural_network_a7a0350b8acec162310832fb94bc14220} 
+static double {\bfseries calc\+Sigmoid} (double n)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_neural_network_a245ebceee63d43ef72cd7e043a3cf7ef}\label{class_neural_network_a245ebceee63d43ef72cd7e043a3cf7ef} 
+int {\bfseries input\+Size}
+\item 
+\Hypertarget{class_neural_network_a3c880874d339d4943a4f13b14eee1afe}\label{class_neural_network_a3c880874d339d4943a4f13b14eee1afe} 
+int {\bfseries hidden\+Size}
+\item 
+\Hypertarget{class_neural_network_aa8fb0fd0becc5bc761c00c75f8f3bab4}\label{class_neural_network_aa8fb0fd0becc5bc761c00c75f8f3bab4} 
+int {\bfseries output\+Size}
+\item 
+\Hypertarget{class_neural_network_a690569472cc1c6f53966ffc6222650d8}\label{class_neural_network_a690569472cc1c6f53966ffc6222650d8} 
+double {\bfseries learning\+Rate}
+\item 
+\Hypertarget{class_neural_network_ad080abec3691cd2d515a6de97924e751}\label{class_neural_network_ad080abec3691cd2d515a6de97924e751} 
+\mbox{\hyperlink{class_my_matrix}{My\+Matrix}} {\bfseries weights1}
+\item 
+\Hypertarget{class_neural_network_a01537f2a7e2068a4c6e10b83ee3a7e46}\label{class_neural_network_a01537f2a7e2068a4c6e10b83ee3a7e46} 
+\mbox{\hyperlink{class_my_matrix}{My\+Matrix}} {\bfseries biases1}
+\item 
+\Hypertarget{class_neural_network_a8a87f67848fe0483ac4925a9de2e08e4}\label{class_neural_network_a8a87f67848fe0483ac4925a9de2e08e4} 
+\mbox{\hyperlink{class_my_matrix}{My\+Matrix}} {\bfseries weights2}
+\item 
+\Hypertarget{class_neural_network_a87bff12e373e60880479b53b6506419a}\label{class_neural_network_a87bff12e373e60880479b53b6506419a} 
+\mbox{\hyperlink{class_my_matrix}{My\+Matrix}} {\bfseries biases2}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_neural_network_aafae44f51fb0f1a2af851eebe9a45644}\label{class_neural_network_aafae44f51fb0f1a2af851eebe9a45644} 
+\index{NeuralNetwork@{NeuralNetwork}!train@{train}}
+\index{train@{train}!NeuralNetwork@{NeuralNetwork}}
+\doxysubsubsection{\texorpdfstring{train()}{train()}}
+{\footnotesize\ttfamily void Neural\+Network\+::train (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::vector$<$ double $>$ $>$ \&}]{inputs,  }\item[{std\+::vector$<$ int $>$ \&}]{labels,  }\item[{int}]{epochs,  }\item[{std\+::vector$<$ double $>$ \&}]{errors,  }\item[{int}]{batch\+Size }\end{DoxyParamCaption})}
+
+
+
+Trains the neural network using the provided training data and labels. 
+
+The function runs the training process over a specified number of epochs, adjusting the network\textquotesingle{}s weights and biases to minimize the error between the network’s output and the target labels. The training data is shuffled at the start of each epoch and is processed in mini-\/batches. The function utilizes Open\+MP for parallel processing of each input in the batch. The backpropagation algorithm is used to calculate the error gradients and update the weights and biases. Progress updates, including the error after each epoch, are emitted as signals.
+
+
+\begin{DoxyParams}{Parameters}
+{\em inputs} & A vector of input vectors, each representing the features of a training example. \\
+\hline
+{\em labels} & A vector of integers representing the target labels corresponding to the input vectors. \\
+\hline
+{\em epochs} & The number of times the entire training dataset is processed. \\
+\hline
+{\em errors} & A reference to a vector where the mean squared error is recorded every 5000 data points. \\
+\hline
+{\em batch\+Size} & The number of training examples in each mini-\/batch. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Amr/\+Desktop/finale/mpt-\/23-\/project-\/abfz/Neuronal\+\_\+\+Network.\+h\item 
+C\+:/\+Users/\+Amr/\+Desktop/finale/mpt-\/23-\/project-\/abfz/Neuronal\+\_\+\+Network.\+cpp\end{DoxyCompactItemize}

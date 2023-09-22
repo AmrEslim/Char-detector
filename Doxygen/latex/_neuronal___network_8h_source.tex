@@ -1,0 +1,50 @@
+\doxysection{Neuronal\+\_\+\+Network.\+h}
+\hypertarget{_neuronal___network_8h_source}{}\label{_neuronal___network_8h_source}\index{C:/Users/Amr/Desktop/finale/mpt-\/23-\/project-\/abfz/Neuronal\_Network.h@{C:/Users/Amr/Desktop/finale/mpt-\/23-\/project-\/abfz/Neuronal\_Network.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ NEURALNETWORK\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ NEURALNETWORK\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}Matrix.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <QThread>}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_neural_network}{NeuralNetwork}}\ :\ \textcolor{keyword}{public}\ QObject\ \{}
+\DoxyCodeLine{00011\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00014\ \ \ \ \ \mbox{\hyperlink{class_neural_network}{NeuralNetwork}}(\textcolor{keywordtype}{int}\ inputSize,\ \textcolor{keywordtype}{int}\ hiddenSize,\ \textcolor{keywordtype}{int}\ outputSize,\ \textcolor{keywordtype}{double}\ learningRate);}
+\DoxyCodeLine{00015\ \ \ \ \ std::vector<double>\ predict(std::vector<double>\&\ input);}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordtype}{int}\ oneHotPredict(std::vector<double>\&\ input);}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_neural_network_aafae44f51fb0f1a2af851eebe9a45644}{train}}(std::vector<std::vector<double>>\&\ inputs,\ std::vector<int>\&\ labels,\ \textcolor{keywordtype}{int}\ epochs,\ std::vector<double>\&\ errors,\ \textcolor{keywordtype}{int}\ batchSize);}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{double}\ calcSigmoid(\textcolor{keywordtype}{double}\ n);}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{void}\ sigmoid(\mbox{\hyperlink{class_my_matrix}{MyMatrix}}\&\ matrix);}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{void}\ save(\textcolor{keyword}{const}\ std::string\&\ filename)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{void}\ load(\textcolor{keyword}{const}\ std::string\&\ filename);}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ signals:}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{void}\ trainingProgress(QString\ message);}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{void}\ epochUpdates(\textcolor{keywordtype}{int}\ epoch);}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{void}\ errorReported(\textcolor{keywordtype}{double}\ error);}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{int}\ inputSize;}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{int}\ hiddenSize;}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{int}\ outputSize;}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{double}\ learningRate;}
+\DoxyCodeLine{00034\ \ \ \ \ \mbox{\hyperlink{class_my_matrix}{MyMatrix}}\ weights1;}
+\DoxyCodeLine{00035\ \ \ \ \ \mbox{\hyperlink{class_my_matrix}{MyMatrix}}\ biases1;}
+\DoxyCodeLine{00036\ \ \ \ \ \mbox{\hyperlink{class_my_matrix}{MyMatrix}}\ weights2;}
+\DoxyCodeLine{00037\ \ \ \ \ \mbox{\hyperlink{class_my_matrix}{MyMatrix}}\ biases2;}
+\DoxyCodeLine{00038\ \};}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00041\ \textcolor{preprocessor}{\#ifndef\ NERONAL\_NEURONAL\_NETWORK\_H}}
+\DoxyCodeLine{00042\ \textcolor{preprocessor}{\#define\ NERONAL\_NEURONAL\_NETWORK\_H}}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//NERONAL\_NEURONAL\_NETWORK\_H}}
+
+\end{DoxyCode}
