@@ -9,7 +9,7 @@ variables:
 before_script:
   - mkdir -p $BUILD_DIR
   - cd $BUILD_DIR
-  - qmake ..
+  - cmake ..
 
 build_job:
   stage: build
