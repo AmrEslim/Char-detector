@@ -1,17 +1,16 @@
-image: qt5
+image: debian:bullseye
 
-stages:
-  - build
-
-variables:
-  BUILD_DIR: "build"
-
-before_script:
-  - mkdir -p $BUILD_DIR
-  - cd $BUILD_DIR
-  - cmake ..
-
-build_job:
+build:
   stage: build
+  tags: [Linux]
+
+  before_script:
+    - apt-get update && apt-get install -y make g++ && apt-get install -y valgrind
+    - apt-get install -y libsdl2-dev libsdl2-image-dev libsdl2-ttf-dev libsdl2-mixer-dev libjsoncpp-dev
+    - apt-get install -y qtbase5-dev
+
   script:
+    - mkdir build
+    - cd build
+    - cmake 
     - make
